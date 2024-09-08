@@ -65,16 +65,3 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 initBubbles();
 animateBubbles();
-
-// Background Upload
-const backgroundUpload = document.getElementById('background-upload');
-backgroundUpload.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    
-    reader.onload = function (event) {
-        document.body.style.backgroundImage = `url(${event.target.result})`;
-    };
-
-    reader.readAsDataURL(file);
-});
