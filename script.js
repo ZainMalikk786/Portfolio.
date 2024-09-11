@@ -1,22 +1,22 @@
-// Custom particle effect
-function createParticles() {
-    const container = document.getElementById('particles-container');
-    const numParticles = 100;
+// Function to create star animations
+function createStars() {
+    const container = document.getElementById('stars-container');
+    const numStars = 150;
     
-    for (let i = 0; i < numParticles; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.width = `${Math.random() * 10 + 5}px`;
-        particle.style.height = particle.style.width;
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.animation = `move ${Math.random() * 10 + 10}s linear infinite`;
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'stars';
+        star.style.width = `${Math.random() * 3 + 1}px`;
+        star.style.height = star.style.width;
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 100}vh`;
+        star.style.animationDuration = `${Math.random() * 1 + 1.5}s`;
         
-        container.appendChild(particle);
+        container.appendChild(star);
     }
 }
 
-createParticles();
+createStars();
 
 // Smooth scrolling for navigation
 document.querySelectorAll('nav a').forEach(anchor => {
