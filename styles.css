@@ -2,13 +2,15 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
-    background-color: #f0f0f0;
+    background-color: #000;
+    color: #fff;
+    position: relative;
 }
 
 nav {
     position: fixed;
     width: 100%;
-    background: #333;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -37,6 +39,11 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bfff;
 }
 
 section {
@@ -45,7 +52,7 @@ section {
     position: relative;
 }
 
-#particles-container {
+#stars-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,14 +60,17 @@ section {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    background: url('your-background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-.particle {
+.stars {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     opacity: 0.8;
     pointer-events: none;
+    animation: shimmer 1.5s infinite;
 }
 
 .content {
@@ -83,21 +93,15 @@ section {
     transform: scale(1.05);
 }
 
-#portfolio {
+#youtube, #discord, #github {
     padding: 50px 20px;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
     border-top: 2px solid #ddd;
 }
 
-/* Keyframes for particle movement animation */
-@keyframes move {
-    0% {
-        transform: translateY(0) translateX(0);
-    }
-    50% {
-        transform: translateY(-50px) translateX(50px);
-    }
-    100% {
-        transform: translateY(0) translateX(0);
-    }
+/* Keyframes for shimmering stars */
+@keyframes shimmer {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
