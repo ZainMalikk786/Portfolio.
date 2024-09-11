@@ -3,53 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zain Malik's Website</title>
+    <title>Zain's Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="logo">Zain Malik</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#youtube">YouTube</a></li>
-            <li><a href="#discord">Discord</a></li>
-            <li><a href="#github">GitHub</a></li>
-        </ul>
-    </nav>
+    <div class="tab" id="youtube-tab">
+        <h1>Youtube Content</h1>
+        <p>Check out Minecraft and songs on my YouTube.</p>
+        <button onclick="window.open('https://youtube.com/@zainalimalik_?si=PGm4auLLmMvAzEVA', '_blank')">YouTube</button>
+    </div>
 
-    <!-- Homepage Section -->
-    <section id="home">
-        <div id="stars-container"></div>
-        <div class="content animated-text">
-            <h1>Welcome to My Website</h1>
-            <p>Explore detailed sections for my YouTube, Discord, and GitHub.</p>
-        </div>
-    </section>
+    <div class="tab" id="discord-tab">
+        <h1>Discord Fun</h1>
+        <p>Join my Discord for fun chats and more.</p>
+        <button onclick="window.open('https://discord.com/invite/S67YUG8EF6', '_blank')">Discord</button>
+    </div>
 
-    <!-- YouTube Section -->
-    <section id="youtube" class="animated-section youtube-section">
-        <h2 class="animated-text">YouTube</h2>
-        <p class="animated-text">Check out my channel for videos related to Minecraft and more.</p>
-        <p class="animated-text">Content includes gameplay, tips, and interesting facts about Minecraft.</p>
-        <a href="https://youtube.com/@zainalimalik_?si=PGm4auLLmMvAzEVA" target="_blank" class="btn glowing-btn">Visit Channel</a>
-    </section>
+    <div class="tab" id="github-tab">
+        <h1>GitHub Projects</h1>
+        <p>Check out my coding projects on GitHub.</p>
+        <button onclick="window.open('https://github.com/ZainMalikk786', '_blank')">GitHub</button>
+    </div>
 
-    <!-- Discord Section -->
-    <section id="discord" class="animated-section discord-section">
-        <h2 class="animated-text">Discord</h2>
-        <p class="animated-text">Join our Discord server for fun, discussions, and chatting with friends.</p>
-        <a href="https://discord.com/invite/S67YUG8EF6" target="_blank" class="btn glowing-btn">Join Server</a>
-    </section>
-
-    <!-- GitHub Section -->
-    <section id="github" class="animated-section github-section">
-        <h2 class="animated-text">GitHub</h2>
-        <p class="animated-text">Explore my GitHub profile where I work on various coding projects and contribute to open source.</p>
-        <a href="https://github.com/ZainMalikk786" target="_blank" class="btn glowing-btn">View Profile</a>
-    </section>
-
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
