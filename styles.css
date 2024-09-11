@@ -50,6 +50,9 @@ section {
     padding: 100px 20px;
     text-align: center;
     position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    margin: 20px;
 }
 
 #stars-container {
@@ -73,35 +76,72 @@ section {
     animation: shimmer 1.5s infinite;
 }
 
-.content {
+.content, .animated-text {
     position: relative;
     z-index: 1;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.buttons .btn {
+.animated-text {
+    font-size: 1.5em;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+.animated-section {
+    animation: sectionGlow 3s ease-in-out infinite;
+}
+
+.youtube-section {
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+.discord-section {
+    background-color: #7289da;
+    border: 2px solid #7289da;
+}
+
+.github-section {
+    background-color: #333;
+    border: 2px solid #333;
+}
+
+.glowing-btn {
     margin: 10px;
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
 }
 
-.buttons .btn:hover {
+.glowing-btn:hover {
     background-color: #0056b3;
     transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1);
 }
 
-#youtube, #discord, #github {
-    padding: 50px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-top: 2px solid #ddd;
-}
-
-/* Keyframes for shimmering stars */
 @keyframes shimmer {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+    50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+    100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+}
+
+@keyframes sectionGlow {
+    0% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); }
+    100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
 }
